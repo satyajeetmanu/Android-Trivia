@@ -36,7 +36,7 @@ class GameWonFragment : Fragment() {
         val args = GameWonFragmentArgs.fromBundle(arguments!!)
         Toast.makeText(context,"Total: ${args.numQuestions}, Correct: ${args.numCorrect}",Toast.LENGTH_LONG).show()
         binding.nextMatchButton.setOnClickListener{
-            it.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
+            it.findNavController().navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
         }
         return binding.root
     }
